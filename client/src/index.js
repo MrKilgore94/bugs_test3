@@ -3,11 +3,28 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Home from './pages/Home';
+import Bugs from './pages/Bugs';
+import BugShow from './pages/BugShow';
+import BugForm from './pages/BugForm';
+import About from './pages/About';
+import Hospital from './pages/Hospital';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<App />}>
+        <Route index element={<Home />} />
+        <Route path='bugs' element={<Bugs />} />
+        <Route path='about' element={<About />} />
+        <Route path='hospital' element={<Hospital />} />
+        <Route path='bugs/:id' element={<BugShow />} />
+        <Route path='bugs/new' element={<BugForm />} />
+        <Route path='bugs/:id/edit' element={<BugForm />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 
