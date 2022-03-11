@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 .border {
   border: 1 px dashed black; 
   margin: 10px;
