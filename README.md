@@ -87,3 +87,6 @@ $ yarn
 $ yarn start
 ```
 
+* Bug.js
+- Bug component to be used in bugs.js where JSON.stringify is 
+
